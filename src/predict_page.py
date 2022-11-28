@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+import pandas as pd
 
 def load_model():
     # with open('./carprice-prediction/saved_model.pkl', 'rb') as file:
@@ -104,7 +105,7 @@ def show_predict_page():
 
             ok = st.form_submit_button("Calculate Car Value")
             if ok:
-                
+                print("i am egre")
                 prediction=model.predict([[int(Year_Selected), Odometer,Condition_Excellent,Condition_Fair,Condition_Good,
                 Condition_Like_New,
                 Condition_New,
@@ -113,3 +114,20 @@ def show_predict_page():
                 
                 st.subheader(f"The estimated Price is ${output}")
           
+            ok2 = st.form_submit_button("Price range by year")
+            data = {"year", "price"}
+            df_range = pd.DataFrame(columns=['year','price'])
+            if ok2:
+                for x in range(-5,5):
+                    pred_year = int(Year_Selected)+x
+                    prediction=model.predict([[pred_year, Odometer,Condition_Excellent,Condition_Fair,Condition_Good,
+                    Condition_Like_New,
+                    Condition_New,
+                    Condition_Salvage]])
+                    output=round(prediction[0], 2)
+                    df_range = df_range.append({'year': pred_year, "price": output}, ignore_index=True)
+                print(df_range)
+                df_range = df_range.astype('int')
+                chart_data = pd.DataFrame(df_range)
+
+                st.line_chart(chart_data,x="year", y="price")
