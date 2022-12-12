@@ -30,6 +30,10 @@ rajat.banerjee@sjsu.edu
 * documentation
 * 
 
+## Credit
+
+The start of this Colab is based off "Basic regression: Predict fuel efficiency" from Tensorflow: https://www.tensorflow.org/tutorials/keras/regression
+
 ## Problem Statement
 Prices of used cars has always been a topic of intrigue, since, unlike the New car market, the prices are not regulated. With the rise of new car prices, sales of used cars have gone up [1]. Therefore there is a need for a system that can determine the value and worthiness of the car using different attributes, which will benefit both buyers as well as sellers.
 
