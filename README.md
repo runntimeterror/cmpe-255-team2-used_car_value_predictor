@@ -1,6 +1,6 @@
 # Team 2 - Rajat + Sarinder
 # CMPE-255 Term Assignment
-# Used car price prediction app
+# Used car price prediction web app
 
 ## Hosted on Streamlit
 https://runntimeterror-cmpe-255-team2-used-car-value-pred-srcapp-9i8d8z.streamlit.app/
@@ -11,19 +11,24 @@ Web Application: https://runntimeterror-cmpe-255-team2-used-car-value-pred-srcap
 Google Colab: https://colab.research.google.com/drive/1c8y_nbKoxZ6ChLdi7bdoQk6COJmp6zvn?usp=sharing
 Source Data: https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data 
 
-
-## Web application for prediction of prices for used cars
+## Contributions
 Sarinder Virk	
 Engineering Extended Studies
 San Jose State University
 San Jose, USA
 sarinder.virk@sjsu.edu
+* data analysis and cleanup
+* training/testing models
+* 
 
 Rajat Banerjee
 Engineering Extended Studies
 San Jose State University
 San Jose, USA
 rajat.banerjee@sjsu.edu
+* streamlit app
+* documentation
+* 
 
 ## Problem Statement
 Prices of used cars has always been a topic of intrigue, since, unlike the New car market, the prices are not regulated. With the rise of new car prices, sales of used cars have gone up [1]. Therefore there is a need for a system that can determine the value and worthiness of the car using different attributes, which will benefit both buyers as well as sellers.
